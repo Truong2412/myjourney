@@ -12,7 +12,6 @@ function Layout({children}: any) {
             <footer className="text-center">
                 <Footer />
             </footer>
-           
         </div>
     );
 }
