@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import TextShower from '../components/common/TextShower'
+import CardWithText from '../components/common/card/TopicCard'
 import Layout from '../components/Layout'
 import styles from '../styles/Home.module.css'
 export default function Home() {
@@ -11,8 +11,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <div className="w-full">
-          <TextShower text="Coding somehow is best choice for every body.........." />
+        <div className="w-full flex flex-wrap">
+          <CardWithText text="HTML" size='w-1/6' boxColor="blue"/>
         </div>
       </Layout>
     </div>

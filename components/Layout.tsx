@@ -1,12 +1,14 @@
 import React from 'react';
-import Footer from './common/Footer';
-import Header from './common/Header';
+import TextShower from './common/TextShower';
+import Footer from './Footer';
+import Header from './Header';
 
 function Layout({children}: any) {
     return (
         <div className="w-full">
             <Header />
             <main>
+                <TextShower text="Coding somehow is best choice for every body.........." />
                 {children}
             </main>
             <footer className="text-center">
