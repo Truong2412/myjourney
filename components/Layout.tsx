@@ -8,7 +8,7 @@ function Layout({children}: any) {
         <div className="w-full">
             <Header />
             <main>
-                <TextShower text="Coding somehow is best choice for every body.........." />
+                <TextShower text="<p> Im just a internship, but i have something to share if you are newbie, hope all i have can help you better........... </p>" />
                 {children}
             </main>
             <footer className="text-center">

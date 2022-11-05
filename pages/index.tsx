@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import CardWithText from '../components/common/card/TopicCard'
+import { topics } from '../components/constant/topics'
 import Layout from '../components/Layout'
 import styles from '../styles/Home.module.css'
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -11,8 +13,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <div className="w-full flex flex-wrap">
-          <CardWithText text="HTML" size='w-1/6' boxColor="blue"/>
+        <p className="text-14 my-5">Share all the knowledge i have accumulated</p>
+        <div className="w-full flex flex-wrap gap-10">
+          {topics && topics.map((item,key)=>{
+            return <CardWithText size="w-1/6" img={item.img} introText={item.introText} link={item.link} />
+          })}
+          
         </div>
       </Layout>
     </div>
