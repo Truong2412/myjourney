@@ -1,13 +1,22 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
+import clientPromise from "../../lib/mongodb";
 
-type Data = {
-  name: string
-}
+export default async (req: any, res: any) => {
+   try {
+       const client = await clientPromise;
+       if(client){
+        res.send("hehe")
+       }
+      //  const db = client.db("sample_mflix");
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
-  res.status(200).json({ name: 'John Doe' })
-}
+      //  const movies = await db
+      //      .collection("movies")
+      //      .find({})
+      //      .sort({ metacritic: -1 })
+      //      .limit(10)
+      //      .toArray();
+
+      //  res.json(movies);
+   } catch (e) {
+       console.error(e);
+   }
+};
