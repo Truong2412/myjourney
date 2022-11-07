@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import CardWithText from '../components/common/card/TopicCard'
+import TextShower from '../components/common/TextShower'
 import { topics } from '../components/constant/topics'
 import Layout from '../components/Layout'
 import styles from '../styles/Home.module.css'
@@ -13,10 +14,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <p className="text-14 my-5">Share all the knowledge i have accumulated</p>
+        <p className="text-14 my-5">Code chill chill chiu chiu chin chin..........</p>
         <div className="w-full flex flex-wrap gap-10">
+          <TextShower text="<p> Im just a internship, but i have something to share if you are newbie, hope all i have can help you better........... </p>" />
           {topics && topics.map((item,key)=>{
-            return <CardWithText size="w-1/6" img={item.img} introText={item.introText} link={item.link} />
+            return <CardWithText key={key} size="w-1/6" img={item.img} introText={item.introText} link={item.link} />
           })}
           
         </div>

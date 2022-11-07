@@ -12,8 +12,9 @@ function TextShower({text}: Props) {
     },[text,textShowing])
     
     return (
-        <p className='font-mono text-green-400 p-5 text-xs'>
+        <p className=' w-full rounded-md bg-slate-500 font-mono text-green-400 p-5 text-xs'>
             {textShowing}
+            <span className='animate-textPointer text-black'>|</span>
         </p>
     );
 }
